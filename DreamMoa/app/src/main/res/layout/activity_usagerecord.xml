@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@color/colorAccent"
+            android:fitsSystemWindows="true"
+            app:elevation="0dp">
+
+
+            <android.support.v7.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+
+                <ImageButton
+                    android:id="@+id/backbtn"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:background="#00ff0000"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/list_back_icon" />
+                <ImageView
+                    android:id="@+id/main_title"
+                    android:layout_width="132dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/list_title" />
+
+            </android.support.v7.widget.Toolbar>
+
+
+        </android.support.design.widget.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:background="@color/colorAccent">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="15dp">
+                    <Spinner
+                        android:id="@+id/monthSpinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18dp"
+                        android:layout_marginLeft="5dp"
+                        android:text="월"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="#eeeeee">
+                <TextView
+                    android:id="@+id/tnameTxt"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="27dp"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:textColor="#333333"
+                    android:text="사용자"/>
+                <TextView
+                    android:id="@+id/taddressTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:gravity="right"
+                    android:textColor="#333333"
+                    android:letterSpacing="-0.06"
+                    android:text="자치구/"/>
+                <TextView
+                    android:id="@+id/ttypeTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:gravity="right"
+                    android:textColor="#333333"
+                    android:letterSpacing="-0.06"
+                    android:text="타입/"/>
+                <TextView
+                    android:id="@+id/tcountTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:gravity="right"
+                    android:layout_marginRight="27dp"
+                    android:textColor="#333333"
+                    android:letterSpacing="-0.06"
+                    android:text="횟수"/>
+
+            </LinearLayout>
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+                <ScrollView
+                    android:id="@+id/usgeScrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible"
+                    android:scrollbars="none"
+                    android:fillViewport="true"
+                    android:background="#fff">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+                        <ListView
+                            android:id="@+id/usgeListView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:cacheColorHint="#00000000"
+                            android:choiceMode="none"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:longClickable="false" />
+                    </LinearLayout>
+                </ScrollView>
+                <ImageButton
+                    android:id="@+id/listAddBtn"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginRight="27dp"
+                    android:layout_marginEnd="27dp"
+                    android:layout_marginBottom="19dp"
+                    android:scaleType="centerInside"
+                    android:background="#00ff0000"
+                    android:src="@drawable/list_plus"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

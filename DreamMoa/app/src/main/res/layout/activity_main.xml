@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@color/colorAccent"
+            android:fitsSystemWindows="true">
+
+            <android.support.v7.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+
+                <ImageView
+                    android:id="@+id/main_title"
+                    android:layout_width="54dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/main_title" />
+
+
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="7">
+
+
+            <LinearLayout
+                android:id="@+id/card_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:background="#fff"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/card_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/cardView"
+                        android:layout_width="285dp"
+                        android:layout_height="140dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="35dp"
+                        app:cardCornerRadius="15dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/mmm"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/cardStatusLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@color/colorAccent"
+                                android:orientation="horizontal"
+                                android:weightSum="3">
+
+                                <TextView
+                                    android:id="@+id/cardNameTxt"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="2"
+                                    android:padding="10dp"
+                                    android:text="'사용자'님의 현재 잔액"
+                                    android:textSize="15dp" />
+
+                                <TextView
+                                    android:id="@+id/dDayTxt"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="right"
+                                    android:padding="10dp"
+                                    android:text="충전 D-0"
+                                    android:textSize="15dp" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/moneyTxt"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="0원"
+                                android:textStyle="bold"
+                                android:textSize="30dp" />
+
+                            <ProgressBar
+                                android:id="@+id/progressBar"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:max="100"
+                                android:padding="5dp"
+                                android:visibility="gone"
+                                android:progressDrawable="@drawable/myprogressbar" />
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <ImageButton
+                        android:id="@+id/addBtn"
+                        android:layout_width="109dp"
+                        android:layout_height="13dp"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="10dp"
+                        android:background="#00ff0000"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/register" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/menu_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4"
+                android:background="@drawable/back_3"
+                android:orientation="vertical">
+
+                <!--메뉴 버튼 4개를 담을 레이아웃 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="13dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/myDreamCardBtn"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:background="#00ff0000"
+                            android:scaleType="centerInside"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/icon_1" />
+
+                        <ImageButton
+                            android:id="@+id/myLocationSearchBtn"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:background="#00ff0000"
+                            android:layout_marginLeft="10dp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/icon_2" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/storeSearchBtn"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:background="#00ff0000"
+                            android:scaleType="centerInside"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/icon_3" />
+
+                        <ImageButton
+                            android:id="@+id/faqBtn"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:background="#00ff0000"
+                            android:layout_marginLeft="10dp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/icon_4" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

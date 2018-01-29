@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@color/colorAccent"
+            android:fitsSystemWindows="true">
+
+
+            <android.support.v7.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+
+                <ImageButton
+                    android:id="@+id/homeBtn"
+                    android:layout_width="20dp"
+                    android:layout_height="21dp"
+                    android:background="#00ff0000"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/card_home_icon" />
+
+                <ImageView
+                    android:id="@+id/main_title"
+                    android:layout_width="132dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/card_title" />
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.AppBarLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/card_back_n"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="23.8dp"
+                        android:layout_height="24.5dp"
+                        android:layout_marginLeft="24.5dp"
+                        android:layout_marginRight="47dp"
+                        android:layout_marginTop="25.3dp"
+
+                        android:src="@drawable/card_text_1" />
+
+                    <EditText
+                        android:id="@+id/userName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="17dp"
+                        android:background="#ffffff"
+                        android:layout_marginRight="26dp"
+                        android:layout_marginTop="25.3dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="35.3dp"
+                        android:layout_height="24.5dp"
+                        android:layout_marginLeft="24.5dp"
+                        android:src="@drawable/card_text_2"
+                        android:layout_marginRight="34.5dp"
+                        android:text="지역구"
+                        android:textSize="20dp" />
+
+                    <Spinner
+                        android:id="@+id/addressSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="26dp">
+
+                    </Spinner>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="48.5dp"
+                        android:layout_height="24.5dp"
+                        android:layout_marginLeft="24.5dp"
+                        android:layout_marginRight="22.3dp"
+                        android:src="@drawable/card_text_3"
+                        android:text="지원단가"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/uintCostTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="26dp"
+                        android:gravity="center"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="48.3dp"
+                        android:layout_height="24.5dp"
+                        android:layout_marginLeft="24.5dp"
+                        android:layout_marginRight="22.3dp"
+                        android:src="@drawable/card_text_4"
+                        android:text="타입"
+                        android:textSize="20dp" />
+
+                    <Spinner
+                        android:id="@+id/typeSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="26dp">
+
+                    </Spinner>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="50.5dp"
+                        android:layout_height="24.5dp"
+                        android:layout_marginLeft="24.5dp"
+                        android:layout_marginRight="22.3dp"
+                        android:src="@drawable/card_text_5"
+                        android:text="횟수"
+                        android:textSize="20dp" />
+
+                    <Spinner
+                        android:id="@+id/countSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="26dp"></Spinner>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/saveBtn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/colorAccent"
+                android:text="저장"
+                android:textSize="18dp" />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

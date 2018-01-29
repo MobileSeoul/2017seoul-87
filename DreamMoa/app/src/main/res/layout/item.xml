@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@drawable/back_1">
+    <ImageView
+        android:id="@+id/itemImg"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginBottom="13dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginLeft="25.3dp"
+        android:src="@drawable/list_icon"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/itemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="#1f1f1f"
+            android:text="이름"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/itemAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#555555"
+            android:layout_marginTop="5dp"
+            android:text="주소"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/itemTel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#555555"
+            android:text="전화번호"
+            android:textSize="12dp" />
+    </LinearLayout>
+</LinearLayout>
